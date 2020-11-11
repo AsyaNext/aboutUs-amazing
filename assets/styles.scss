@@ -41,6 +41,9 @@
       display: flex;
       align-items: flex-end;
       width: 290px;
+      .header-content__head-logo {
+        width: 134px;
+      }
       .header-content__head-caption {
         margin-left: 22px;
         font-weight: 300;
@@ -521,6 +524,7 @@
     background-repeat: no-repeat;
     background-position: top center;
     backdrop-filter: blur(24px);
+    z-index: -2;
   }
   .goals-content {
     padding-top: 60px;
@@ -647,6 +651,325 @@
           width: 60%;
         }
       }
+    }
+  }
+}
+
+.brand {
+  margin-top: 64px;
+  .brand-content {
+    .brand-content__title {
+      margin-bottom: 36px;
+      position: relative;
+      text-transform: uppercase;
+      .title-shadow {
+        bottom: 40px;
+      }
+    }
+    .brand-content__info {
+      position: relative;
+      display: flex;
+      align-items: center;
+      .brand-content__info-description {
+        margin-right: 100px;
+        width: 25%;
+        line-height: 25px;
+        opacity: 0.4;
+      }
+      .logo-1 {
+        margin-right: 150px;
+      }
+      .brand-content__info-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+          margin-bottom: 26px;
+        }
+        .brand-content__info-logo-btn {
+          margin-top: 8px;
+          border: 1.5px solid rgba(242, 242, 242, 0.2);
+          box-sizing: border-box;
+          border-radius: 214px;
+          padding: 10px 22px;
+          .brand-content__info-logo-btn-caption {
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            .svg {
+              color: #EB3E2E;
+              font-weight: 800;
+            }
+            .png {
+              color: #4B74B9;
+              font-weight: 800;
+            }
+            .weight {
+              margin-left: 10px;
+              letter-spacing: 0;
+              opacity: 0.4;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.other-products {
+  position: relative;
+  margin-top: 86px;
+  .other-products-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .other-products-content__title {
+      width: 30%;
+      font-weight: 800;
+      font-size: 36px;
+      line-height: 29px;
+    }
+    .other-products-content__list {
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: repeat(3, 194px);
+      grid-gap: 70px;
+      .other-products-content__list-item {
+        display: flex;
+        align-items: center;
+        .other-products-content__list-item-caption {
+          margin-left: 16px;
+          display: flex;
+          flex-direction: column;
+          font-weight: 800;
+          font-size: 18px;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+        }
+      }
+      .product-1 {
+        span {
+          color: #4B74B9;
+        }
+      }
+      .product-2 {
+        span {
+          color: #EB3E2E;
+        }
+      }
+      .product-3 {
+        span {
+          color: #588721;
+        }
+      }
+    }
+  }
+}
+
+.community {
+  .community-content {
+    position: relative;
+    padding-top: 91px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .community-content__img {
+      position: absolute;
+      bottom: -104px;
+      left: -180px;
+      z-index: 2;
+      @include transition(all 0.3s ease);
+      &:hover {
+        @include transform(scale(1.1));
+      }
+    }
+    .community-content__description {
+      width: 40%;
+      .community-content__title {
+        width: 35%;
+        position: absolute;
+        top: 80px;
+        left: -180px;
+        font-weight: 900;
+        font-size: 64px;
+        text-transform: uppercase;
+        transform: rotate(-90deg);
+        transform-origin: right top 0;
+        padding-right: 40px;
+        z-index: 1;
+      }
+    }
+    .community-content__networks {
+      width: 692px;
+      display: flex;
+      flex-direction: column;
+      .official-group {
+        background-color: #EB3E2E;
+      }
+      .free-group {
+        background-color: #4B74B9;
+      }
+      .community-content__networks-group {
+        margin-bottom: 16px;
+        padding: 50px;
+        height: 112px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 6px;
+        cursor: pointer;
+        @include transition(all 0.3s ease);
+        &:hover {
+          @include transform(scale(0.95));
+        }
+        &:active {
+          position: relative;
+          top: 1px;
+        }
+        .community-content__networks-group-row {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: flex-end;
+          color: white;
+          &:first-child {
+            align-items: flex-start;
+          }
+          img {
+            width: 109px;
+          }
+          .community-content__networks-group-row-annotation {
+            line-height: 21px;
+          }
+          .community-content__networks-group-row-members {
+            font-size: 24px;
+            span {
+              font-size: 24px;
+              font-weight: bold;
+            }
+          }
+          .community-content__networks-group-row-btn {
+            width: 24px;
+            height: 24px;
+            background-image: url("images/icons/arrow-right.svg");
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  position: relative;
+  margin-top: 104px;
+  padding-bottom: 30px;
+  height: 467px;
+  background-color: #000000;
+  background-image: url("images/footer.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  .footer-glow {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -50%;
+    background: radial-gradient(50% 50% at 50% 50%, #282828 0%, rgba(97, 97, 97, 0) 100%) center;
+    z-index: -1;
+  }
+  .footer-navigation {
+    margin-top: 60px;
+    margin-bottom: 67px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    .footer-navigation__logo {
+      width: 109px;
+      margin-right: 150px;
+    }
+    .footer-navigation__navbar {
+      position: relative;
+      top: -6px;
+      font-size: 16px;
+      color: #E0E0E0;
+      div:not(:first-child) {
+        margin-bottom: 14px;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.8;
+        }
+        &:active {
+          position: relative;
+          top: 1px;
+        }
+      }
+      .footer-navigation__navbar-title {
+        margin-bottom: 24px;
+        font-weight: bold;
+        font-size: 24px;
+      }
+    }
+    .footer-navigation__networks {
+      display: grid;
+      grid-template-rows: repeat(2, 84px);
+      grid-template-columns: repeat(3, 84px);
+      grid-gap: 16px;
+      .footer-navigation__networks-item {
+        border-radius: 6px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        @include transition(all 0.3s ease);
+        &:hover {
+          @include transform(scale(1.05))
+        }
+        &:active {
+          position: relative;
+          top: 1px;
+        }
+      }
+      .discord {
+        grid-column: span 1;
+        grid-row: span 2;
+        background-image: url("images/icons/discord.svg"), linear-gradient(0deg, #7289DA 0%, #B9C8FF 100%);
+      }
+      .insta {
+        background-image: url("images/icons/insta.svg"), linear-gradient(135deg, #FFDD55 6.62%, #FF543E 50.06%, #C837AB 93.5%);
+      }
+      .tiktok {
+        background-image: url("images/icons/tiktok.svg"), linear-gradient(135deg, #25F4EE 0%, #FE2C55 100%);
+      }
+      .youtube {
+        background-image: url("images/icons/youtube.svg"), linear-gradient(-45deg, #E53935 0%, #E5356A 100%);
+      }
+      .telegram {
+        background-image: url("images/icons/telegram.svg"), linear-gradient(-45deg, #03A9F4 0%, #42C4FF 100%);
+      }
+    }
+  }
+  .footer-description {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    line-height: 22px;
+    color: #E0E0E0;
+    div {
+      font-weight: 300;
+    }
+    .footer-description__caption {
+      position: absolute;
+      right: 0;
+      bottom: 0;
     }
   }
 }
