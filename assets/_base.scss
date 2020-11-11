@@ -3,13 +3,13 @@
   font-family: "Proxima Nova", sans-serif;
   font-size: 14px;
   font-weight: normal;
-  user-select: none;
   outline: none;
 }
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   width: 100%;
+  //max-width: 2560px;
   height: 100%;
   background-color: #0F0F0F;
 }
@@ -17,7 +17,7 @@ body {
   box-sizing: border-box;
   width: 100%;
   max-width: 1170px;
-  padding: 0 30px;
+  padding: 0 40px;
   margin: 0 auto;
 }
 .title-main {
