@@ -259,16 +259,12 @@ body {
 .history .history-content .history-content__post .history-content__post-title .history-content__post-timepoint {
   position: absolute;
   top: 4px;
-  left: -46px;
-  border-radius: 50%;
-  border: 3px dashed #F2F2F2;
-}
-.history .history-content .history-content__post .history-content__post-title .history-content__post-timepoint .history-content__post-timepoint-item {
-  margin: 8px;
-  width: 12px;
-  height: 12px;
-  border-radius: inherit;
-  background-color: #F2F2F2;
+  left: -43px;
+  width: 28px;
+  height: 28px;
+  background-image: url("images/icons/time-point.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 .history .history-content .history-content__post .history-content__post-title .history-content__post-year {
   margin-right: 48px;
@@ -428,6 +424,9 @@ body {
 }
 .history .history-content .post-3 .history-content__post-media .material-3 {
   background-image: url("images/material-4.png");
+}
+.history .history-content .post-5 .history-content__post-desc {
+  flex-direction: row-reverse;
 }
 
 .awards {
@@ -784,39 +783,46 @@ body {
 }
 .brand .brand-content {
   display: flex;
-  flex-direction: column;
-}
-.brand .brand-content .brand-content__title {
-  margin-bottom: 36px;
-  position: relative;
-  text-transform: uppercase;
-}
-.brand .brand-content .brand-content__title .title-shadow {
-  bottom: 40px;
+  justify-content: space-between;
 }
 .brand .brand-content .brand-content__info {
   position: relative;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+}
+.brand .brand-content .brand-content__info .brand-content__info-title {
+  margin-bottom: 96px;
+  position: relative;
+  text-transform: uppercase;
+}
+.brand .brand-content .brand-content__info .brand-content__info-title .title-shadow {
+  bottom: 0;
+  top: 40px;
 }
 .brand .brand-content .brand-content__info .brand-content__info-description {
-  margin-right: 100px;
-  width: 25%;
+  width: 60%;
   line-height: 25px;
   opacity: 0.4;
 }
-.brand .brand-content .brand-content__info .logo-1 {
-  margin-right: 150px;
+.brand .brand-content .brand-content__logos {
+  margin-right: 84px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 238px);
+  column-gap: 150px;
+  row-gap: 64px;
 }
-.brand .brand-content .brand-content__info .brand-content__info-logo {
+.brand .brand-content .brand-content__logos .brand-content__logos-item {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
 }
-.brand .brand-content .brand-content__info .brand-content__info-logo img {
+.brand .brand-content .brand-content__logos .brand-content__logos-item img {
   margin-bottom: 26px;
 }
-.brand .brand-content .brand-content__info .brand-content__info-logo .brand-content__info-logo-btn {
+.brand .brand-content .brand-content__logos .brand-content__logos-item .brand-content__logos-item-btn {
+  width: 213px;
   margin-top: 8px;
   border: 1.5px solid rgba(242, 242, 242, 0.2);
   box-sizing: border-box;
@@ -828,30 +834,33 @@ body {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.brand .brand-content .brand-content__info .brand-content__info-logo .brand-content__info-logo-btn:hover {
+.brand .brand-content .brand-content__logos .brand-content__logos-item .brand-content__logos-item-btn:hover {
   background-color: rgba(242, 242, 242, 0.2);
 }
-.brand .brand-content .brand-content__info .brand-content__info-logo .brand-content__info-logo-btn:active {
+.brand .brand-content .brand-content__logos .brand-content__logos-item .brand-content__logos-item-btn:active {
   position: relative;
   top: 1px;
 }
-.brand .brand-content .brand-content__info .brand-content__info-logo .brand-content__info-logo-btn .brand-content__info-logo-btn-caption {
+.brand .brand-content .brand-content__logos .brand-content__logos-item .brand-content__logos-item-btn .brand-content__logos-item-btn-caption {
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 0.1em;
 }
-.brand .brand-content .brand-content__info .brand-content__info-logo .brand-content__info-logo-btn .brand-content__info-logo-btn-caption .svg {
+.brand .brand-content .brand-content__logos .brand-content__logos-item .brand-content__logos-item-btn .brand-content__logos-item-btn-caption .svg {
   color: #EB3E2E;
   font-weight: 800;
 }
-.brand .brand-content .brand-content__info .brand-content__info-logo .brand-content__info-logo-btn .brand-content__info-logo-btn-caption .png {
+.brand .brand-content .brand-content__logos .brand-content__logos-item .brand-content__logos-item-btn .brand-content__logos-item-btn-caption .png {
   color: #4B74B9;
   font-weight: 800;
 }
-.brand .brand-content .brand-content__info .brand-content__info-logo .brand-content__info-logo-btn .brand-content__info-logo-btn-caption .weight {
+.brand .brand-content .brand-content__logos .brand-content__logos-item .brand-content__logos-item-btn .brand-content__logos-item-btn-caption .weight {
   margin-left: 10px;
   letter-spacing: 0;
   opacity: 0.4;
+}
+.brand .brand-content .brand-content__logos .logo-3 img {
+  margin-bottom: 20px;
 }
 
 .other-products {
@@ -1164,15 +1173,10 @@ body {
 
   .history-content__post-timepoint {
     position: absolute;
-    top: 6px !important;
-    left: -28px !important;
-    border-radius: 50%;
-    border: 3px dashed #F2F2F2;
-  }
-  .history-content__post-timepoint .history-content__post-timepoint-item {
-    margin: 4px !important;
-    width: 8px !important;
-    height: 8px !important;
+    top: 8px !important;
+    left: -27px !important;
+    width: 20px !important;
+    height: 20px !important;
   }
 }
 @media (max-width: 1100px) {
@@ -1231,6 +1235,10 @@ body {
     display: none;
   }
 
+  .brand-content .brand-content__logos {
+    margin-right: 0 !important;
+  }
+
   .goals-content__list {
     width: 100% !important;
   }
@@ -1250,13 +1258,6 @@ body {
   }
   .history-content__post-year span {
     font-size: 24px !important;
-  }
-
-  .brand-content .brand-content__info .brand-content__info-description {
-    margin-right: 50px !important;
-  }
-  .brand-content .brand-content__info .logo-1 {
-    margin-right: 100px !important;
   }
 
   .footer-navigation__logo {
@@ -1308,21 +1309,17 @@ body {
   }
 
   .brand-content {
+    flex-direction: column;
     align-items: center;
   }
   .brand-content .brand-content__info {
     flex-direction: column;
+    align-items: center;
     text-align: center;
+    margin-bottom: 36px;
   }
-  .brand-content .brand-content__info .brand-content__info-description {
-    margin-right: 0 !important;
-    width: 60% !important;
-  }
-  .brand-content .brand-content__info .logo-1 {
-    margin-right: 0 !important;
-  }
-  .brand-content .brand-content__info .brand-content__info-logo {
-    margin-top: 24px;
+  .brand-content .brand-content__info .brand-content__info-title {
+    margin-bottom: 48px !important;
   }
 
   .other-products-content {
@@ -1390,7 +1387,7 @@ body {
     width: 100% !important;
   }
   .history-content .history-content__post .history-content__post-desc {
-    flex-direction: column;
+    flex-direction: column !important;
     align-items: flex-start !important;
   }
   .history-content .history-content__post .history-content__post-desc .history-content__post-desc-material {
@@ -1416,6 +1413,10 @@ body {
 
   .history-content__post-separator {
     width: 400px;
+  }
+
+  .history-content__post-timepoint {
+    top: 4px !important;
   }
 
   .awards-content {
@@ -1483,6 +1484,12 @@ body {
     margin-bottom: 24px;
   }
 }
+@media (max-width: 700px) {
+  .brand-content__logos {
+    grid-template-columns: 238px !important;
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
 @media (max-width: 600px) {
   .title-main {
     font-size: 48px;
@@ -1534,6 +1541,10 @@ body {
   }
   .goals-content__list-item img {
     display: none;
+  }
+
+  .brand-content__info-title .title-shadow {
+    top: 25px !important;
   }
 
   .community .community-content .community-content__networks .community-content__networks-group {
@@ -1598,6 +1609,10 @@ body {
 
   .history-content__post-separator {
     width: 200px;
+  }
+
+  .history-content__post-timepoint {
+    top: 2px !important;
   }
 
   .history-content .history-content__post-description, .history-content .history-content__post-caption {
