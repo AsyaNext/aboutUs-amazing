@@ -610,6 +610,18 @@ body {
   background: white;
   box-shadow: 0 14px 44px rgba(0, 0, 0, 0.14);
   border-radius: 6px;
+  cursor: pointer;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.principles .principles-content .principles-content__list .principles-content__list-item:hover {
+  -o-transform: scale(1.08);
+  -ms-transform: scale(1.08);
+  -moz-transform: scale(1.08);
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
 }
 .principles .principles-content .principles-content__list .principles-content__list-item .principles-content__list-item-title {
   margin-bottom: 16px;
