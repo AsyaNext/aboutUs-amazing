@@ -540,6 +540,7 @@ body {
 }
 .awards .awards-content .post-1 img {
   width: 55%;
+  border-bottom-right-radius: 6px;
 }
 .awards .awards-content .post-1 .awards-content__post-caption-icon {
   background-image: url("images/icons/icon-award.svg");
@@ -559,6 +560,9 @@ body {
   background-image: url("images/award-back-3.png");
   background-position: right;
   background-repeat: no-repeat;
+}
+.awards .awards-content .post-3 img {
+  border-bottom-right-radius: 6px;
 }
 .awards .awards-content .post-3 .awards-content__post-caption-icon {
   background-image: url("images/icons/icon-zap.svg");
